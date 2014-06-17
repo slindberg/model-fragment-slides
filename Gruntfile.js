@@ -97,6 +97,12 @@ module.exports = function(grunt) {
       },
 
       watch: {
+        options: {
+          livereload: true
+        },
+        index: {
+          files: [ 'index.html' ]
+        },
         main: {
           files: [ 'Gruntfile.js', 'js/reveal.js', 'css/reveal.css' ],
           tasks: 'default'
