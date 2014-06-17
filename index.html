@@ -1,13 +1,11 @@
 <!doctype html>
 <html lang="en">
-
   <head>
     <meta charset="utf-8">
 
-    <title>reveal.js - The HTML Presentation Framework</title>
+    <title>Ember Data - Model Fragments</title>
 
     <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-    <meta name="author" content="Hakim El Hattab">
 
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -21,7 +19,7 @@
     <link rel="stylesheet" href="lib/css/zenburn.css">
 
     <!-- Live reload -->
-    <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+    <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>');</script>
 
     <!-- If the query includes 'print-pdf', include the PDF print sheet -->
     <script>
@@ -40,358 +38,508 @@
   </head>
 
   <body>
-
     <div class="reveal">
-
-      <!-- Any section element inside of this container is displayed as a slide -->
       <div class="slides">
         <section>
-          <h1>Reveal.js</h1>
-          <h3>HTML Presentations Made Easy</h3>
-          <p>
-            <small>Created by <a href="http://hakim.se">Hakim El Hattab</a> / <a href="http://twitter.com/hakimel">@hakimel</a></small>
-          </p>
-        </section>
-
-        <section>
-          <h2>Heads Up</h2>
-          <p>
-            reveal.js is a framework for easily creating beautiful presentations using HTML. You'll need a browser with
-            support for CSS 3D transforms to see it in its full glory.
-          </p>
-
-          <aside class="notes">
-            Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-          </aside>
-        </section>
-
-        <!-- Example of nested vertical slides -->
-        <section>
           <section>
-            <h2>Vertical Slides</h2>
+            <h1>Ember Data<br/>Model Fragments</h1>
+            <h3>The <em>Other</em> Kind of Embedded Record</h3>
             <p>
-              Slides can be nested inside of other slides,
-              try pressing <a href="#" class="navigate-down">down</a>.
+              <small>Created by <a href="mailto:steven@lytics.io">Steven Lindberg</a> at <a href="www.lytics.io">Lytics</a></small>
             </p>
-            <a href="#" class="image navigate-down">
-              <img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-            </a>
-          </section>
-          <section>
-            <h2>Basement Level 1</h2>
-            <p>Press down or up to navigate.</p>
-          </section>
-          <section>
-            <h2>Basement Level 2</h2>
-            <p>Cornify</p>
-            <a class="test" href="http://cornify.com">
-              <img width="280" height="326" src="https://s3.amazonaws.com/hakim-static/reveal-js/cornify.gif" alt="Unicorn">
-            </a>
-          </section>
-          <section>
-            <h2>Basement Level 3</h2>
-            <p>That's it, time to go back up.</p>
-            <a href="#/2" class="image">
-              <img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="-webkit-transform: rotate(180deg);">
-            </a>
-          </section>
-        </section>
-
-        <section>
-          <h2>Slides</h2>
-          <p>
-            Not a coder? No problem. There's a fully-featured visual editor for authoring these, try it out at <a href="http://slid.es" target="_blank">http://slid.es</a>.
-          </p>
-        </section>
-
-        <section>
-          <h2>Point of View</h2>
-          <p>
-            Press <strong>ESC</strong> to enter the slide overview.
-          </p>
-          <p>
-            Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt + click anywhere to zoom back out.
-          </p>
-        </section>
-
-        <section>
-          <h2>Works in Mobile Safari</h2>
-          <p>
-            Try it out! You can swipe through the slides and pinch your way to the overview.
-          </p>
-        </section>
-
-        <section>
-          <h2>Marvelous Unordered List</h2>
-          <ul>
-            <li>No order here</li>
-            <li>Or here</li>
-            <li>Or here</li>
-            <li>Or here</li>
-          </ul>
-        </section>
-
-        <section>
-          <h2>Fantastic Ordered List</h2>
-          <ol>
-            <li>One is smaller than...</li>
-            <li>Two is smaller than...</li>
-            <li>Three!</li>
-          </ol>
-        </section>
-
-        <section data-markdown>
-          <script type="text/template">
-            ## Markdown support
-
-            For those of you who like that sort of thing. Instructions and a bit more info available [here](https://github.com/hakimel/reveal.js#markdown).
-
-            ```
-            <section data-markdown>
-              ## Markdown support
-
-              For those of you who like that sort of thing.
-              Instructions and a bit more info available [here](https://github.com/hakimel/reveal.js#markdown).
-            </section>
-            ```
-          </script>
-        </section>
-
-        <section id="transitions">
-          <h2>Transition Styles</h2>
-          <p>
-            You can select from different transitions, like: <br>
-            <a href="?transition=cube#/transitions">Cube</a> -
-            <a href="?transition=page#/transitions">Page</a> -
-            <a href="?transition=concave#/transitions">Concave</a> -
-            <a href="?transition=zoom#/transitions">Zoom</a> -
-            <a href="?transition=linear#/transitions">Linear</a> -
-            <a href="?transition=fade#/transitions">Fade</a> -
-            <a href="?transition=none#/transitions">None</a> -
-            <a href="?#/transitions">Default</a>
-          </p>
-        </section>
-
-        <section id="themes">
-          <h2>Themes</h2>
-          <p>
-            Reveal.js comes with a few themes built in: <br>
-            <a href="?#/themes">Default</a> -
-            <a href="?theme=sky#/themes">Sky</a> -
-            <a href="?theme=beige#/themes">Beige</a> -
-            <a href="?theme=simple#/themes">Simple</a> -
-            <a href="?theme=serif#/themes">Serif</a> -
-            <a href="?theme=night#/themes">Night</a> <br>
-            <a href="?theme=moon#/themes">Moon</a> -
-            <a href="?theme=solarized#/themes">Solarized</a>
-          </p>
-          <p>
-            <small>
-              * Theme demos are loaded after the presentation which leads to flicker. In production you should load your theme in the <code>&lt;head&gt;</code> using a <code>&lt;link&gt;</code>.
-            </small>
-          </p>
-        </section>
-
-        <section>
-          <h2>Global State</h2>
-          <p>
-            Set <code>data-state="something"</code> on a slide and <code>"something"</code>
-            will be added as a class to the document element when the slide is open. This lets you
-            apply broader style changes, like switching the background.
-          </p>
-        </section>
-
-        <section data-state="customevent">
-          <h2>Custom Events</h2>
-          <p>
-            Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
-          </p>
-          <pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
-Reveal.addEventListener( 'customevent', function() {
-  console.log( '"customevent" has fired' );
-} );
-          </code></pre>
-        </section>
-
-        <section>
-          <section data-background="#007777">
-            <h2>Slide Backgrounds</h2>
-            <p>
-              Set <code>data-background="#007777"</code> on a slide to change the full page background to the given color. All CSS color formats are supported.
-            </p>
-            <a href="#" class="image navigate-down">
-              <img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-            </a>
-          </section>
-          <section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png">
-            <h2>Image Backgrounds</h2>
-            <pre><code>&lt;section data-background="image.png"&gt;</code></pre>
-          </section>
-          <section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" data-background-repeat="repeat" data-background-size="100px">
-            <h2>Repeated Image Backgrounds</h2>
-            <pre><code style="word-wrap: break-word;">&lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&gt;</code></pre>
-          </section>
-        </section>
-
-        <section data-transition="linear" data-background="#4d7e65" data-background-transition="slide">
-          <h2>Background Transitions</h2>
-          <p>
-            Pass reveal.js the <code>backgroundTransition: 'slide'</code> config argument to make backgrounds slide rather than fade.
-          </p>
-        </section>
-
-        <section data-transition="linear" data-background="#8c4738" data-background-transition="slide">
-          <h2>Background Transition Override</h2>
-          <p>
-            You can override background transitions per slide by using <code>data-background-transition="slide"</code>.
-          </p>
-        </section>
-
-        <section>
-          <h2>Clever Quotes</h2>
-          <p>
-            These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-              &ldquo;The nice thing about standards is that there are so many to choose from&rdquo;</q> and block:
-          </p>
-          <blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-            &ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
-            reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
-          </blockquote>
-        </section>
-
-        <section>
-          <h2>Pretty Code</h2>
-          <pre><code data-trim contenteditable>
-function linkify( selector ) {
-  if( supports3DTransforms ) {
-
-    var nodes = document.querySelectorAll( selector );
-
-    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-      var node = nodes[i];
-
-      if( !node.className ) {
-        node.className += ' roll';
-      }
-    }
-  }
-}
-          </code></pre>
-          <p>Courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
-        </section>
-
-        <section>
-          <h2>Intergalactic Interconnections</h2>
-          <p>
-            You can link between slides internally,
-            <a href="#/2/3">like this</a>.
-          </p>
-        </section>
-
-        <section>
-          <section id="fragments">
-            <h2>Fragmented Views</h2>
-            <p>Hit the next arrow...</p>
-            <p class="fragment">... to step through ...</p>
-            <ol>
-              <li class="fragment"><code>any type</code></li>
-              <li class="fragment"><em>of view</em></li>
-              <li class="fragment"><strong>fragments</strong></li>
-            </ol>
 
             <aside class="notes">
-              This slide has fragments which are also stepped through in the notes window.
+              <ul>
+                <li>I work at a startup called Lytics, we do third party data aggregation, powerful user segmentation, stuff like that</li>
+                <li>DISCLAIMER: this is going to get technical</li>
+              </ul>
             </aside>
           </section>
           <section>
-            <h2>Fragment Styles</h2>
-            <p>There's a few styles of fragments, like:</p>
-            <p class="fragment grow">grow</p>
-            <p class="fragment shrink">shrink</p>
-            <p class="fragment roll-in">roll-in</p>
-            <p class="fragment fade-out">fade-out</p>
-            <p class="fragment highlight-red">highlight-red</p>
-            <p class="fragment highlight-green">highlight-green</p>
-            <p class="fragment highlight-blue">highlight-blue</p>
-            <p class="fragment current-visible">current-visible</p>
-            <p class="fragment highlight-current-blue">highlight-current-blue</p>
+            <h2>Relations are hard</h2>
+            <div class="fragment">
+              <p><em>Really</em> hard. Ugh.</p>
+              <img width="499" height="374" src="img/hard.gif" alt="really really really really hard">
+            </div>
+
+            <aside class="notes">
+              <ul>
+                <li>Like grand unification theory, but for client-side JavaScript frameworks...</li>
+                <li>Not well defined (jsonapi.org), unlimited edge cases</li>
+              </ul>
+            </aside>
+          </section>
+          <section>
+            <h3>Love, not hate.</h3>
+            <img height="600" src="img/love.png" alt="they are your dearest friends">
+
+            <aside class="notes">
+              <ul>
+                <li>Shout out to all the Ember Data devs</li>
+                <li>Lots of anger and frustration out there</li>
+                <li>There's a reason there aren't any really good client side ORMs out there</li>
+                <li>Land-slide effect</li>
+              </ul>
+            </aside>
+          </section>
+        </section>
+
+        <section data-background="#04819e">
+          <section>
+            <h2>Embedded Records</h2>
+            <p>Support since waaay back.</p>
+
+            <aside class="notes">
+              <ul>
+                <li>Ember Data has supported the notion of 'embedded' records since at least 'revision 12'</li>
+              </ul>
+            </aside>
+          </section>
+
+          <section>
+            <h3>Embedding</h3>
+            <pre><code class="javascript" data-trim contenteditable>
+{
+  "post": {
+    "id": 1,
+    "title": "Rails is omakase",
+    "comments": [
+      {
+        "id": "1",
+        "body": "Rails is unagi"
+      }, {
+        "id": "2",
+        "body": "Omakase O_o"
+      }
+    ]
+  }
+}
+            </code></pre>
+
+            <aside class="notes">
+              <ul>
+                <li>Request for 'post', API by default gives you comments as well</li>
+                <li>Do it to minimize the number of AJAX requests to your API</li>
+                <li>Where the term really comes from</li>
+              </ul>
+            </aside>
+          </section>
+          <section>
+            <h3>Sideloading</h3>
+            <pre><code class="javascript" data-trim contenteditable>
+{
+  "post": {
+    "id": 1,
+    "title": "Rails is omakase",
+    "comments": ["1", "2"]
+  },
+
+  "comments": [
+    {
+      "id": "1",
+      "body": "Rails is unagi"
+    }, {
+      "id": "2",
+      "body": "Omakase O_o"
+    }
+  ]
+}
+            </code></pre>
+
+            <aside class="notes">
+              <ul>
+                <li>Recognized early on that its really no different than sideloading</li>
+                <li>Embedded or not, records are in same payload</li>
+                <li>Allows for arbitrary records to be pushed into the store</li>
+              </ul>
+            </aside>
+          </section>
+          <section>
+            <a href="https://twitter.com/wycats">@wycats</a> put it best:
+            <img width="894" height="360" src="img/two_types.png" alt="two types of embedded records">
+          </section>
+          <section>
+            <h3>Type 1</h3>
+            <ul>
+              <li class="fragment fade-in">Really just two-way sideloading</li>
+              <li class="fragment fade-in">Records are first-class; must have unique identifier</li>
+              <li class="fragment fade-in">Currently supported by the <code class="javascript">DS.EmbeddedRecordsMixin</code></li>
+            </ul>
+
+            <aside class="notes">
+              <ul>
+                <li>Sidesaving?</li>
+              </ul>
+            </aside>
+          </section>
+
+          <section>
+            <h3>Type 2</h3>
+            <ul>
+              <li class="fragment fade-in">Persistence is entirely dependent on a 'primary' record</li>
+              <li class="fragment fade-in">Currently not supported by Ember Data</li>
+              <li class="fragment fade-in">Some APIs are going to be backed by document stores (MongoDB, RethinkDB), which make it natural to use nested documents</li>
+              <li class="fragment fade-in">Implementations require that embedded records are given fake identifiers — <span class="fragment highlight-blue">annoying, but not <em>that</em> big of a deal</span></li>
+            </ul>
+
+            <aside class="notes">
+              <ul>
+                <li>Because ED does such a good job of decoupling the transport and payload format from the object model (adapters/serializers)</li>
+                <li>Despite what you think about Mongo, sometimes you have to work with an API you don't control</li>
+              </ul>
+            </aside>
+          </section>
+
+          <section>
+            <h3>Dependent State</h3>
+            <ul>
+              <li class="fragment fade-in">Identifier-less embedded records are just complex properties</li>
+              <li class="fragment fade-in">Natural that an embedded record's state is linked to its owner record's state</li>
+              <li class="fragment fade-in">Important for driving UI behavior</li>
+            </ul>
+
+            <aside class="notes">
+              <ul>
+                <li>The hard part</li>
+                <li>How many people use `isDirty` to drive UI, e.g. graying out a button, etc.</li>
+              </ul>
+            </aside>
+          </section>
+        </section>
+
+        <section data-background="#ffb100" style="color: #555;">
+          <section>
+            <h2 style="color: #555;">Model Fragments</h2>
+            <p><a href="https://github.com/lytics/ember-data.model-fragments" style="color: #555;">github.com/lytics/ember-data.model-fragments</a></p>
+
+            <aside class="notes">
+              <ul>
+                <li>Named mostly to disambiguate</li>
+              </ul>
+            </aside>
+          </section>
+
+          <section>
+            <p>A ‘fragment’ quacks like a model, only lacks persistence logic</p>
+            <pre><code class="javascript" data-trim contenteditable>
+App.Name = DS.ModelFragment.extend({
+  first : DS.attr('string'),
+  last  : DS.attr('string')
+});
+            </code></pre>
+            <pre><code class="javascript" data-trim contenteditable>
+var name = ...; // instance of `App.Name`
+
+name.save(); // => "TypeError: undefined is not a function"
+            </code></pre>
+          </section>
+
+          <section>
+            <p>A model can have two types of fragment properties: single fragment or an array of fragments</p>
+            <pre><code class="javascript" data-trim contenteditable>
+App.Person = DS.Model.extend({
+  name      : DS.hasOneFragment('name'),
+  addresses : DS.hasManyFragments('address')
+});
+
+App.Name = DS.ModelFragment.extend({
+  first  : DS.attr('string'),
+  last   : DS.attr('string')
+});
+
+App.Address = DS.ModelFragment.extend({
+  street  : DS.attr('string'),
+  city    : DS.attr('string'),
+  region  : DS.attr('string'),
+  country : DS.attr('string')
+});
+            </code></pre>
+
+            <aside class="notes">
+              <ul>
+                <li>acts very much like `DS.hasMany` and `DS.belongsTo`</li>
+              </ul>
+            </aside>
+          </section>
+
+          <section>
+            <p>Fragments are always tied to a single owner record that cannot change (except when newly created)</p>
+            <pre><code class="javascript" data-trim contenteditable>
+var person1 = store.getById('person', 1);
+var person2 = store.getById('person', 2);
+
+person1.set('name', person2.get('name')); // => "Fragments can only belong to one owner, try copying instead"
+
+person1.set('name', person2.get('name').copy()); // fragments implement `Ember.Copyable`
+
+person1.set('name', store.createFragment({
+  first : 'Leah',
+  last  : 'Sibler'
+}));
+            </code></pre>
+          </section>
+
+          <section>
+            <p>Fragments are manipulated like normal records, and propagate state changes up to the owner record</p>
+            <pre><code class="javascript" data-trim contenteditable>
+var person = store.getById('person', 1);
+var name = person.get('name');
+
+person.get('isDirty'); // => false
+name.get('isDirty'); // => false
+
+name.set('first', 'Rumpelstiltskin');
+
+person.get('isDirty'); // => true
+name.get('isDirty'); // => true
+            </code></pre>
+          </section>
+
+          <section>
+            <p>Changes to arrays (additions, deletions, reordering) affect owner record’s state</p>
+            <pre><code class="javascript" data-trim contenteditable>
+var person = store.getById('person', 1);
+var addresses = person.get('addresses');
+
+person.get('isDirty'); // => false
+addresses.get('isDirty'); // => false
+addresses.get('length'); // 3
+
+addresses.popObject();
+
+person.get('isDirty'); // => true
+addresses.get('isDirty'); // => true
+addresses.get('length'); // 2
+            </code></pre>
+
+            <aside class="notes">
+              <ul>
+                <li>Getting into new territory</li>
+                <li>Here be dragons (edge cases)</li>
+              </ul>
+            </aside>
+          </section>
+
+          <section>
+            <p>Fragments are registered on the container as models, so can have their own serializers</p>
+            <pre><code class="javascript" data-trim contenteditable>
+App.Name = DS.ModelFragment.extend({
+  first  : DS.attr('string'),
+  last   : DS.attr('string')
+});
+
+App.NameSerializer = DS.RESTSerializer.extend({
+  attrs: {
+    first : 'given',
+    last  : 'surname'
+  }
+});
+            </code></pre>
+          </section>
+
+          <section>
+            <p>Serializing the owner record serializes fragments, <code>so save()</code>ing a record saves its fragments</p>
+            <pre><code class="javascript" data-trim contenteditable>
+var person = store.getById('person', 1);
+
+person.serialize(); /* =>
+  {
+    "name": {
+      "first": "Tyrion",
+      "last": "Lannister"
+    },
+    "address": {
+      "street": "1 Sky Cell",
+      "city": "Eyre",
+      "region": "Vale of Arryn",
+      "country": "Westeros"
+    }
+  }
+*/
+            </code></pre>
+          </section>
+
+          <section>
+            <p>Supports <code>rollback()</code> at fragment and record level</p>
+            <pre><code class="javascript" data-trim contenteditable>
+var person = store.getById('person', 1);
+var name = person.get('name');
+
+name.set('first', 'Alex');
+person.rollback();
+
+person.get('isDirty'); // => false
+name.get('isDirty'); // => false
+
+name.set('first', 'Robert');
+name.rollback();
+
+person.get('isDirty'); // => false
+name.get('isDirty'); // => false
+            </code></pre>
+          </section>
+
+          <section>
+            <p>Yes, fragments can be nested</p>
+            <pre><code class="javascript" data-trim contenteditable>
+App.Transaction = DS.Model.extend({
+  purchases: DS.hasManyFragments('purchase'),
+  ...
+});
+
+App.Purchase = DS.ModelFragment.extend({
+  amount   : DS.hasOneFragment('amount'),
+  quantity : DS.attr('number'),
+  ...
+});
+
+App.Amount = DS.ModelFragment.extend({
+  currency : DS.attr('string'),
+  value    : DS.attr('string')
+});
+            </code></pre>
+          </section>
+
+          <section>
+            <h2 style="color: #555;">Approach</h2>
+            <ul>
+              <li class="fragment fade-in">Plugin that adds to <code>DS</code> namespace</li>
+              <li class="fragment fade-in">Reuse most of <code>DS.Model</code> by extracting bits that don’t deal with persistence</li>
+              <li class="fragment fade-in">Create simplified state machine that notifies owner of state changes</li>
+              <li class="fragment fade-in">Create state-aware array that notifies owner record of state changes</li>
+              <li class="fragment fade-in"><strong>The good</strong>: leverages existing codebase, fragments are familiar, can have their own serializers</li>
+              <li class="fragment fade-in"><strong>The bad</strong>: relies heavily on private APIs</li>
+            </ul>
+
+            <aside class="notes">
+              <ul>
+                <li>Currently working, but should be considered a proof of concept</li>
+                <li>Mostly relies on private APIs that aren't likely to change soon</li>
+              </ul>
+            </aside>
+          </section>
+        </section>
+
+        <section data-background="#a61300">
+          <section>
+            <h2>Limitations</h2>
+          </section>
+
+          <section>
+            <h3>Merging Arrays of Fragments</h3>
+            <ul>
+              <li class="fragment fade-in">How to reconcile array of fragment objects with JSON response?</li>
+              <li class="fragment fade-in">What constitutes an identical fragment? No way to know without unique identifier.</li>
+              <li class="fragment fade-in">Possible solution: <code>merge</code> hook?</li>
+            </ul>
+          </section>
+
+          <section>
+            <h3>No Filtered Record Arrays</h3>
+            <ul>
+              <li class="fragment fade-in">No 'master list' of fragments of a particular type like with <code>DS.Model</code></li>
+              <li class="fragment fade-in">Can’t display a list of options to choose from without implementing special <code>copy()</code> glue code</li>
+            </ul>
+
+            <aside class="notes">
+              <ul>
+                <li>igorT's 'addresses' problem</li>
+              </ul>
+            </aside>
+          </section>
+
+          <section>
+            <h3>Observer Execution Order</h3>
+            <ul>
+              <li class="fragment fade-in">Accessing owner record attributes may return stale data</li>
+              <li class="fragment fade-in">Product of computed property caching and how <code>DS.Model</code> properties are dependent on <code>data</code> property</li>
+            </ul>
+          </section>
+
+          <section>
+            <h3>TODOs and Caveats</h3>
+            <ul>
+              <li class="fragment fade-in">Fragments cannot (currently) have relations to full models</li>
+              <li class="fragment fade-in">In-flight state of fragments (currently) doesn’t exist</li>
+              <li class="fragment fade-in">Behavior won’t always mimic <code>DS.hasMany</code> and <code>DS.belongsTo</code> when they become async</li>
+              <li class="fragment fade-in">Performance<span class="fragment">???</span></li>
+            </ul>
+
+            <aside class="notes">
+              <ul>
+                <li>Adding relationship support will be hard, SSOT, async relations, changing private APIs</li>
+                <li>Haven't explored performance of highly nested fragment hierarchies</li>
+              </ul>
+            </aside>
+          </section>
+
+          <section>
+            <h2>Alternative Approach</h2>
+          </section>
+
+          <section>
+            <h3>Serializer + Relationship Dependency</h3>
+            <ul>
+              <li class="fragment fade-in">Treating embedded records as full models isn’t the end of the world</li>
+              <li class="fragment fade-in">
+                <p>Relationship state dependence is a problem (and valuable) for normal relationships</p>
+                <ol>
+                  <li class="fragment fade-in">Declarative: on relationship property options</li>
+                  <li class="fragment fade-in">Through model hooks</li>
+                </ol>
+              </li>
+              <li class="fragment fade-in">Has advantage of pushing 'truth' into the serializer, and therefore serialized state</li>
+            </ul>
+
+            <aside class="notes">
+              <ul>
+                <li>Faking IDs just sucks</li>
+                <li>Truth living in serialized state is arguably the correct and only place it can live</li>
+                <li>Still doesn't really solve the problem, just where it should be solved</li>
+              </ul>
+            </aside>
           </section>
         </section>
 
         <section>
-          <h2>Spectacular image!</h2>
-          <a class="image" href="http://lab.hakim.se/meny/" target="_blank">
-            <img width="320" height="299" src="http://s3.amazonaws.com/hakim-static/portfolio/images/meny.png" alt="Meny">
-          </a>
-        </section>
-
-        <section>
-          <h2>Export to PDF</h2>
-          <p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, below is an example that's been uploaded to SlideShare.</p>
-          <iframe id="slideshare" src="http://www.slideshare.net/slideshow/embed_code/13872948" width="455" height="356" style="margin:0;overflow:hidden;border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen> </iframe>
-          <script>
-            document.getElementById('slideshare').attributeName = 'allowfullscreen';
-          </script>
-        </section>
-
-        <section>
-          <h2>Take a Moment</h2>
-          <p>
-            Press b or period on your keyboard to enter the 'paused' mode. This mode is helpful when you want to take distracting slides off the screen
-            during a presentation.
-          </p>
-        </section>
-
-        <section>
-          <h2>Stellar Links</h2>
+          <h2>Thanks!</h2>
           <ul>
-            <li><a href="http://slid.es">Try the online editor</a></li>
-            <li><a href="https://github.com/hakimel/reveal.js">Source code on GitHub</a></li>
-            <li><a href="http://twitter.com/hakimel">Follow me on Twitter</a></li>
+            <li><a href="www.lytics.io">www.lytics.io</a></small></li>
+            <li><a href="mailto:steven@lytics.io">Steven Lindberg &lt;steven@lytics.io&gt;</a></li>
+            <li><a href="https://github.com/lytics/ember-data.model-fragments">https://github.com/lytics/ember-data.model-fragments</a></p></li>
           </ul>
         </section>
-
-        <section>
-          <h1>THE END</h1>
-          <h3>BY Hakim El Hattab / hakim.se</h3>
-        </section>
-
       </div>
-
     </div>
 
     <script src="lib/js/head.min.js"></script>
     <script src="js/reveal.min.js"></script>
-
     <script>
-
       // Full list of configuration options available here:
-    // https://github.com/hakimel/reveal.js#configuration
-    Reveal.initialize({
-      controls: true,
-      progress: true,
-      history: true,
-      center: true,
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
 
-      theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-      transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+        theme: 'night', // available themes are in /css/theme
+        transition: 'concave', // default/cube/page/concave/zoom/linear/fade/none
 
-      // Parallax scrolling
-      // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
-      // parallaxBackgroundSize: '2100px 900px',
+        // Parallax scrolling
+        // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+        // parallaxBackgroundSize: '2100px 900px',
 
-      // Optional libraries used to extend on reveal.js
-      dependencies: [
-        { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-        { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-        { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-        { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-        { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-        { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
-      ]
-    });
-
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+      });
     </script>
-
   </body>
 </html>
